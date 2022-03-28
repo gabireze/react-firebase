@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { ListMovies } from './components/ListMovies';
+import { RealtimeListMovies } from './components/RealtimeListMovies';
+import { AddMovie } from './components/AddMovie';
+import { UpdateMovie } from './components/UpdateMovie';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h3>React + Firebase = ❤️</h3>
       </header>
+      <main className="App-main">
+        <RealtimeListMovies />
+        <ListMovies />
+        <AddMovie />
+        <UpdateMovie />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
